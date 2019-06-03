@@ -19,8 +19,7 @@ namespace Spike.ZebraScanner
             InitializeComponent();
             MessagingCenter.Subscribe<Application, string>(Application.Current, "InitialScan", (sender, args) =>
             {
-                string message = args;
-                DisplayAlert("Message Received", "arg=" + args, "OK");
+                lblXamForms.Text = $"Scanned Barcode {args}";
             });
         }
     }
